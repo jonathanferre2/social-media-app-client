@@ -7,10 +7,10 @@ export default {
       contrastText: "#fff",
     },
     secondary: {
-      light: "#ff6333",
-      main: "#ff3d00",
-      dark: "#b22a00",
-      contrastText: "#fff",
+      light: "#ffffff",
+      main: "#eceff1",
+      dark: "#babdbe",
+      contrastText: "#000",
     },
   },
   global: {
