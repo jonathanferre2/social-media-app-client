@@ -2,8 +2,9 @@ import React, { Component, Fragment } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import withStyles from "@material-ui/core/styles/withStyles";
-import CustomButton from "../util/CustomButton";
+import CustomButton from "../../util/CustomButton";
 import LikeButton from "./LikeButton";
+import Comments from "./Comments";
 import dayjs from "dayjs";
 
 //MUI
@@ -20,13 +21,10 @@ import ChatIcon from "@material-ui/icons/Chat";
 
 //Redux
 import { connect } from "react-redux";
-import { getScream } from "../redux/actions/dataActions";
+import { getScream } from "../../redux/actions/dataActions";
 
 const styles = (theme) => ({
-  invisibleSeparator: {
-    border: "none",
-    margin: 4,
-  },
+  ...theme.global,
   profileImage: {
     maxWidth: 200,
     height: 200,
@@ -75,6 +73,7 @@ class ScreamDialog extends Component {
         commentCount,
         userImage,
         userHandle,
+        comments,
       },
       UI: { loading },
     } = this.props;
@@ -110,6 +109,8 @@ class ScreamDialog extends Component {
           </CustomButton>
           <span>{commentCount} comments</span>
         </Grid>
+        <hr className={classes.invisibleSeparator} />
+        <Comments comments={comments}></Comments>
       </Grid>
     );
 
