@@ -14,6 +14,7 @@ const styles = (theme) => ({
   ...theme.global,
   center: {
     textAlign: "center",
+    marginBottom: 30,
   },
 });
 
@@ -67,7 +68,6 @@ class CommentForm extends Component {
             Submit
           </Button>
         </form>
-        <hr className={classes.visibleSeparator} />
       </Grid>
     ) : null;
     return commentFormMarkup;
