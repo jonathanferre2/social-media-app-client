@@ -96,6 +96,7 @@ class Notifications extends Component {
             aria-owns={anchorEl ? "simple-menu" : undefined}
             aria-haspopup="true"
             onClick={this.handleOpen}
+            color="secondary"
           >
             {notificationsIcon}
           </IconButton>
